@@ -1,0 +1,187 @@
+<!-- <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Subir y Mostrar Imágenes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    input[type="file"] {
+      margin-bottom: 20px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .gallery img {
+      width: 48%;
+      object-fit: cover;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Subir hasta 10 imágenes</h2>
+  <input type="file" id="fileInput" accept="image/*" multiple />
+  <div class="gallery" id="gallery"></div>
+
+  <script>
+    const fileInput = document.getElementById('fileInput');
+    const gallery = document.getElementById('gallery');
+
+    fileInput.addEventListener('change', (event) => {
+      gallery.innerHTML = ""; // Limpiar antes de mostrar nuevas imágenes
+      const files = Array.from(event.target.files).slice(0, 10); // máximo 10 imágenes
+
+      files.forEach(file => {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          const img = document.createElement('img');
+          img.src = e.target.result;
+          gallery.appendChild(img);
+        };
+        reader.readAsDataURL(file);
+      });
+    });
+  </script>
+
+</body>
+</html> -->
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Galería de Imágenes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .gallery img {
+      width: 48%;
+      object-fit: cover;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Galería de Imágenes</h2>
+  <div class="gallery">
+    <img src="D:\USUARIO\Documents\uide septimo ciclo\Interfaces\semana2\jpeg.jpeg" alt="Imagen 1">
+    <img src="D:\USUARIO\Documents\uide septimo ciclo\Interfaces\semana2\jpeg.jpg" alt="Imagen 2">
+    <img src="D:\USUARIO\Documents\uide septimo ciclo\Interfaces\semana2\jpg.jpg" alt="Imagen 3">
+    <img src="D:\USUARIO\Documents\uide septimo ciclo\Interfaces\semana2\jpg.png" alt="Imagen 4">
+    <img src="D:\USUARIO\Documents\uide septimo ciclo\Interfaces\semana2\png.png" alt="Imagen 5">
+    <img src="D:\USUARIO\Documents\uide septimo ciclo\Interfaces\semana2\png.webp" alt="Imagen 6">
+    <img src="D:\USUARIO\Documents\uide septimo ciclo\Interfaces\semana2\svg.svg" alt="Imagen 7">
+    <img src="D:\USUARIO\Documents\uide septimo ciclo\Interfaces\semana2\svg.webp" alt="Imagen 8">
+    <img src="D:\USUARIO\Documents\uide septimo ciclo\Interfaces\semana2\webp.webp" alt="Imagen 9">
+    <img src="D:\USUARIO\Documents\uide septimo ciclo\Interfaces\semana2\webp.wp2" alt="Imagen 10">
+  </div>
+
+</body>
+</html> -->
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Galería de Imágenes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: space-between;
+    }
+    figure {
+      width: 48%;
+      margin: 0;
+    }
+    figure img {
+      width: 100%;
+      object-fit: cover;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+    }
+    figcaption {
+      text-align: center;
+      margin-top: 5px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Galería de Imágenes</h2>
+  <div class="gallery">
+    <figure>
+      <img src="D:\USUARIO\Documents\uide septimo ciclo\Interfaces\semana2\jpeg.jpeg" alt="Imagen 1">
+      <figcaption>.jpeg Original</figcaption>
+    </figure>
+    <figure>
+      <img src="D:\USUARIO\Documents\uide septimo ciclo\Interfaces\semana2\jpeg.jpg" alt="Imagen 2">
+      <figcaption>.jpg </figcaption>
+    </figure>
+    <figure>
+      <img src="D:\USUARIO\Documents\uide septimo ciclo\Interfaces\semana2\jpg.jpg" alt="Imagen 3">
+      <figcaption>.jpg Original </figcaption>
+    </figure>
+    <figure>
+      <img src="D:\USUARIO\Documents\uide septimo ciclo\Interfaces\semana2\jpg.png" alt="Imagen 4">
+      <figcaption>.png</figcaption>
+    </figure>
+    <figure>
+      <img src="D:\USUARIO\Documents\uide septimo ciclo\Interfaces\semana2\png.png" alt="Imagen 5">
+      <figcaption>.png Original</figcaption>
+    </figure>
+    <figure>
+      <img src="D:\USUARIO\Documents\uide septimo ciclo\Interfaces\semana2\png.webp" alt="Imagen 6">
+      <figcaption>.webp</figcaption>
+    </figure>
+    <figure>
+      <img src="D:\USUARIO\Documents\uide septimo ciclo\Interfaces\semana2\svg.svg" alt="Imagen 7">
+      <figcaption>.svg Original</figcaption>
+    </figure>
+    <figure>
+      <img src="D:\USUARIO\Documents\uide septimo ciclo\Interfaces\semana2\svg.webp" alt="Imagen 8">
+      <figcaption>.webp</figcaption>
+    </figure>
+    <figure>
+      <img src="D:\USUARIO\Documents\uide septimo ciclo\Interfaces\semana2\webp.webp" alt="Imagen 9">
+      <figcaption>.webp Original</figcaption>
+    </figure>
+    <figure>
+      <img src="D:\USUARIO\Documents\uide septimo ciclo\Interfaces\semana2\webp.avif" alt="Imagen 10">
+      <figcaption>.avif</figcaption>
+    </figure>
+  </div>
+
+</body>
+</html>
+
